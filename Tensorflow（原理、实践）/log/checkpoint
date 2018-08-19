@@ -1,0 +1,2 @@
+model_checkpoint_path: "linermodel.cpkt"
+all_model_checkpoint_paths: "linermodel.cpkt"
