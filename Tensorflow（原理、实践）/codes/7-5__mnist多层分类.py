@@ -9,7 +9,7 @@ Created on Fri May 12 16:22:16 2017
 import tensorflow as tf
 # 导入 MINST 数据集
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("/data/", one_hot=True)
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 #参数设置
 learning_rate = 0.001
