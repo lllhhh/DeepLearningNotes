@@ -11,8 +11,8 @@ import numpy as np
 # 网络结构：2维输入 --> 2维隐藏层 --> 1维输出
 
 learning_rate = 1e-4
-n_input  = 2
-n_label  = 1
+n_input = 2
+n_label = 1
 n_hidden = 2
 
 
@@ -22,22 +22,23 @@ y = tf.placeholder(tf.float32, [None, n_label])
 weights = {
     'h1': tf.Variable(tf.truncated_normal([n_input, n_hidden], stddev=0.1)),
     'h2': tf.Variable(tf.random_normal([n_hidden, n_label], stddev=0.1))
-	} 
+}
+
 biases = {
     'h1': tf.Variable(tf.zeros([n_hidden])),
     'h2': tf.Variable(tf.zeros([n_label]))
-    }    
+}
 
 
 layer_1 = tf.nn.relu(tf.add(tf.matmul(x, weights['h1']), biases['h1']))
-#y_pred = tf.nn.tanh(tf.add(tf.matmul(layer_1, weights['h2']),biases['h2']))
+y_pred = tf.nn.tanh(tf.add(tf.matmul(layer_1, weights['h2']),biases['h2']))
 #y_pred = tf.nn.relu(tf.add(tf.matmul(layer_1, weights['h2']),biases['h2']))#局部最优解
 
 #y_pred = tf.nn.sigmoid(tf.add(tf.matmul(layer_1, weights['h2']),biases['h2']))
 
 #Leaky relus  40000次 ok
-layer2 =tf.add(tf.matmul(layer_1, weights['h2']),biases['h2'])
-y_pred = tf.maximum(layer2,0.01*layer2)
+# layer2 =tf.add(tf.matmul(layer_1, weights['h2']),biases['h2'])
+# y_pred = tf.maximum(layer2,0.01*layer2)
   
 loss=tf.reduce_mean((y_pred-y)**2)
 train_step = tf.train.AdamOptimizer(learning_rate).minimize(loss)
