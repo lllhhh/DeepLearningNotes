@@ -70,7 +70,7 @@ xb =np.array(xb)
 plt.scatter(xr[:,0], xr[:,1], c='r',marker='+')
 plt.scatter(xb[:,0], xb[:,1], c='b',marker='o')
 
-plt.show() 
+plt.show()
 Y=np.reshape(Y,[-1,1])
 
 learning_rate = 1e-4
