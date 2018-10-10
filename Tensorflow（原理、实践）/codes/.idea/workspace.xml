@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="7-6__异或集的过拟合.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="7-6__异或集的过拟合.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/7-6__异或集的过拟合.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-604">
-              <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="24">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="e#153#176#0" expanded="true" />
                 <element signature="e#424#596#0" expanded="false" />
@@ -25,11 +25,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="7-3__异或.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/7-3__异或.py">
+      <file leaf-file-name="7-7__异或集的L2_loss.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/7-7__异或集的L2_loss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="286">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="7-8__异或集dropout.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/7-8__异或集dropout.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="602">
+              <caret line="110" column="94" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="110" selection-end-column="94" />
               <folding>
                 <element signature="e#153#176#0" expanded="true" />
               </folding>
@@ -47,10 +57,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="746" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="577" />
     <option name="y" value="-1440" />
-    <option name="width" value="1109" />
+    <option name="width" value="1278" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectView">
@@ -99,7 +109,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.7-6__异或集的过拟合">
+  <component name="RunManager" selected="Python.7-7__异或集的L2_loss">
     <configuration name="7-5__mnist多层分类" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -136,14 +146,34 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="2">
+    <configuration name="7-7__异或集的L2_loss" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="codes" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7-7__异或集的L2_loss.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.7-5__mnist多层分类" />
       <item index="1" class="java.lang.String" itemvalue="Python.7-6__异或集的过拟合" />
+      <item index="2" class="java.lang.String" itemvalue="Python.7-7__异或集的L2_loss" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.7-6__异或集的过拟合" />
-        <item index="1" class="java.lang.String" itemvalue="Python.7-5__mnist多层分类" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.7-7__异或集的L2_loss" />
+        <item index="1" class="java.lang.String" itemvalue="Python.7-6__异或集的过拟合" />
+        <item index="2" class="java.lang.String" itemvalue="Python.7-5__mnist多层分类" />
       </list>
     </recent_temporary>
   </component>
@@ -164,10 +194,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="746" y="-1440" width="1109" height="1440" extended-state="6" />
+    <frame x="577" y="-1440" width="1278" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37867647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37788385" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -223,6 +253,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/7-6__异或集的过拟合.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#153#176#0" expanded="true" />
+            <element signature="e#424#596#0" expanded="false" />
+            <element signature="e#671#1436#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/7-3__异或.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="749">
@@ -233,14 +275,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/7-6__异或集的过拟合.py">
+    <entry file="file://$PROJECT_DIR$/7-7__异或集的L2_loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-604">
-          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state relative-caret-position="286">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7-8__异或集dropout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="110" column="94" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="110" selection-end-column="94" />
           <folding>
             <element signature="e#153#176#0" expanded="true" />
-            <element signature="e#424#596#0" expanded="false" />
-            <element signature="e#671#1436#0" expanded="false" />
           </folding>
         </state>
       </provider>
