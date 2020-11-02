@@ -1,4 +1,6 @@
 {
     "compile-hero.disable-compile-files-on-did-save-code": false,
-    "python.dataScience.jupyterServerURI": "local"
+    "python.dataScience.jupyterServerURI": "local",
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
 }
