@@ -3,6 +3,7 @@ from torch import nn
 import torchvision
 import torchvision.transforms as transforms
 import sys
+import time
 
 def corr2d(X, K):
     h, w = K.shape
