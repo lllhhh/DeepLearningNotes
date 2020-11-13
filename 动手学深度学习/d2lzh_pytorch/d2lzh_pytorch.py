@@ -5,6 +5,13 @@ import torchvision.transforms as transforms
 import sys
 import time
 
+class FlattenLayer(nn.Module):
+    def __init__(self):
+        super(FlattenLayer, self).__init__()
+
+    def forward(self, x):
+        return x.view(x.shape[0], -1)
+
 def corr2d(X, K):
     h, w = K.shape
     Y = torch.zeros((X.shape[0] - h + 1, X.shape[1] - w + 1))
@@ -13,17 +20,34 @@ def corr2d(X, K):
             Y[i, j] = (X[i: i + h, j: j + w] * K ).sum()
     return Y
 
-def load_data_fashion_mnist(batch_size):
-    import sys
-    mnist_train = torchvision.datasets.FashionMNIST(root='~/Datasets/FashionMNIST', train=True, download=True, transform=transforms.ToTensor())
-    mnist_test = torchvision.datasets.FashionMNIST(root='~/Datasets/FashionMNIST', train=False, download=True, transform=transforms.ToTensor())
-    if sys.platform.startswith('win'):
-        num_workers = 0  # 0表示不用额外的进程来加速读取数据
-    else:
-        num_workers = 4
-    train_iter = torch.utils.data.DataLoader(mnist_train, batch_size=batch_size, shuffle=True, num_workers=num_workers)
-    test_iter = torch.utils.data.DataLoader(mnist_test, batch_size=batch_size, shuffle=False, num_workers=num_workers)
-    return (train_iter, test_iter)
+# def load_data_fashion_mnist(batch_size):
+#     import sys
+#     mnist_train = torchvision.datasets.FashionMNIST(root='~/Datasets/FashionMNIST', train=True, download=True, transform=transforms.ToTensor())
+#     mnist_test = torchvision.datasets.FashionMNIST(root='~/Datasets/FashionMNIST', train=False, download=True, transform=transforms.ToTensor())
+#     if sys.platform.startswith('win'):
+#         num_workers = 0  # 0表示不用额外的进程来加速读取数据
+#     else:
+#         num_workers = 4
+#     train_iter = torch.utils.data.DataLoader(mnist_train, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+#     test_iter = torch.utils.data.DataLoader(mnist_test, batch_size=batch_size, shuffle=False, num_workers=num_workers)
+#     return (train_iter, test_iter)
+
+def load_data_fashion_mnist(batch_size, resize=None, root='~/Datasets/FashionMNIST'):
+    """Download the fashion mnist dataset and then load into memory."""
+    trans = []
+    if resize:
+        trans.append(torchvision.transforms.Resize(size=resize))
+    trans.append(torchvision.transforms.ToTensor())
+
+    transform = torchvision.transforms.Compose(trans)
+    mnist_train = torchvision.datasets.FashionMNIST(root=root, train=True, download=True, transform=transform)
+    mnist_test = torchvision.datasets.FashionMNIST(root=root, train=False, download=True, transform=transform)
+
+    train_iter = torch.utils.data.DataLoader(mnist_train, batch_size=batch_size, shuffle=True, num_workers=4)
+    test_iter = torch.utils.data.DataLoader(mnist_test, batch_size=batch_size, shuffle=False, num_workers=4)
+
+    return train_iter, test_iter
+
 
     # 本函数已保存在d2lzh_pytorch包中方便以后使用。该函数将被逐步改进。
 def evaluate_accuracy(data_iter, net, device=None):
