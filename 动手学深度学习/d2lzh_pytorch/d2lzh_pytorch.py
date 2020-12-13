@@ -7,6 +7,10 @@ import time
 import torch.nn.functional as F
 import random
 
+import torch
+import random
+import zipfile
+
 class FlattenLayer(nn.Module):
     def __init__(self):
         super(FlattenLayer, self).__init__()
@@ -138,3 +142,20 @@ def data_iter_random(corpus_indices, batch_size, num_steps, device=None):
         X = [ _data(j * num_steps) for j in batch_indices ]
         Y = [ _data(j * num_steps + 1)  for j in batch_indices]
         yield torch.tensor(X, dtype=torch.float32, device=device), torch.tensor(Y, dtype=torch.float32, device=device)
+
+
+def load_data_jay_lyrics():
+    f = open("../data/house_prediction/jaychou_lyrics.txt")
+    corpus_chars = f.read()
+    corpus_chars[:40]
+    f.close()
+
+    corpus_chars = corpus_chars.replace('\n', ' ').replace('\r', ' ')
+    corpus_chars = corpus_chars[0:10000]
+
+    idx_to_char = list(set(corpus_chars))
+    char_to_idx = dict([(char, i) for i, char in enumerate(idx_to_char)] )
+    vocab_size = len(char_to_idx)
+    corpus_indices = [ char_to_idx[char] for char in corpus_chars ]
+
+    return (corpus_indices, char_to_idx, idx_to_char, vocab_size)
