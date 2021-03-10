@@ -6,7 +6,6 @@ import sys
 import time
 import torch.nn.functional as F
 import random
-
 import torch
 import random
 import zipfile
@@ -159,3 +158,14 @@ def load_data_jay_lyrics():
     corpus_indices = [ char_to_idx[char] for char in corpus_chars ]
 
     return (corpus_indices, char_to_idx, idx_to_char, vocab_size)
+
+def show_images(imgs, num_rows, num_cols, scales=2):
+    fig_size = (num_cols * scales, num_rows * scales)
+    _, axes = plt.subplots(num_rows, num_cols, fig_size=fig_size)
+    for i in range(num_rows):
+        for j in range(num_cols):
+            axes[i][j].imshow(imgs[i * num_cols + j])
+            axes[i][j].axes.get_xaxis().set_visible(False)
+            axes[i][j].axes.get_yaxis().set_visible(False)
+    return axes
+            
