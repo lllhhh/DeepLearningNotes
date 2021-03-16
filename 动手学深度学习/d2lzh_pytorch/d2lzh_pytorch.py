@@ -3,11 +3,11 @@ from torch import nn
 import torchvision
 import torchvision.transforms as transforms
 import sys
+import matplotlib.pyplot as plt
 import time
 import torch.nn.functional as F
 import random
-import torch
-import random
+
 import zipfile
 
 class FlattenLayer(nn.Module):
@@ -161,7 +161,7 @@ def load_data_jay_lyrics():
 
 def show_images(imgs, num_rows, num_cols, scales=2):
     fig_size = (num_cols * scales, num_rows * scales)
-    _, axes = plt.subplots(num_rows, num_cols, fig_size=fig_size)
+    _, axes = plt.subplots(num_rows, num_cols, figsize=fig_size)
     for i in range(num_rows):
         for j in range(num_cols):
             axes[i][j].imshow(imgs[i * num_cols + j])
